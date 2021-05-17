@@ -1,0 +1,96 @@
+﻿<Window x:Class="trip_planer.DispatcherTimersetup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:trip_planer"
+        mc:Ignorable="d"
+        Title="Trip planner" Height="697" Width="1064" ResizeMode="CanMinimize">
+    <Grid Background="#FF1D1F1D" Margin="0,0,0,-6" RenderTransformOrigin="0.5,0.5">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="0"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="226"/>
+            <RowDefinition Height="227"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="325*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="333*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Border BorderThickness="1" BorderBrush="White" Grid.Column="3" Grid.Row="2" Margin="5,5,1.667,4.667"/>
+        <Rectangle HorizontalAlignment="Center" Height="628" Stroke="White" VerticalAlignment="Center" Width="328" Fill="#FF131513" Grid.Column="1" Grid.RowSpan="4" OpacityMask="White" Margin="0,19,0,8.333"/>
+
+        <Button Content="Browse" Click="Wyszukaj_podroz" HorizontalAlignment="Left" Margin="14,110.667,0,0" VerticalAlignment="Top" Height="52" Width="116" FontFamily="Microsoft New Tai Lue" FontSize="17" Background="#FF95AF80" Foreground="#FF1D1F1D" Grid.Column="1" Grid.Row="3"/>
+        <Button Content="Favourite" Click="Dodaj_do_ulubionych" HorizontalAlignment="Right" Margin="0,110.667,14,0" VerticalAlignment="Top" Height="52" Width="118" FontFamily="Microsoft New Tai Lue" FontSize="17" Background="#FF95AF80" Foreground="#FF1D1F1D" Visibility="Visible" Grid.Column="1" Grid.Row="3"/>
+        <TextBox x:Name="start_city" HorizontalAlignment="Center" Text="beginning of the trip" TextWrapping="Wrap" VerticalAlignment="Center" Width="300" Height="45" FontFamily="Microsoft New Tai Lue" FontSize="20" Background="{x:Null}" Foreground="White" Grid.Column="1" Grid.Row="1" TextChanged="TextBox_TextChanged" Margin="14,90,14,91"/>
+        <TextBox x:Name="stop_city" HorizontalAlignment="Center" Text="destination of the trip" TextWrapping="Wrap" VerticalAlignment="Center" Width="300" Height="44" FontFamily="Microsoft New Tai Lue" FontSize="20" Background="{x:Null}" Foreground="White" Grid.Column="1" Grid.Row="1" Margin="14,136,14,46"/>
+        <DatePicker x:Name="data" HorizontalAlignment="Center" VerticalAlignment="Center" Height="45" Width="300" FontSize="20" FontFamily="Microsoft New Tai Lue" Foreground="Black" Background="#FF95AF80" Grid.Column="1" Grid.Row="1" Margin="14,181,14,0">
+            <DatePicker.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
+                    <GradientStop Color="#FFA3AEB9"/>
+                    <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                    <GradientStop Color="#FF718597" Offset="0.375"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </DatePicker.BorderBrush>
+        </DatePicker>
+        <Image x:Name="Obraz_pokaz_slajdow" HorizontalAlignment="Center" Height="156" VerticalAlignment="Center" Width="300" Source="/img_window_1/1.jpg" Stretch="Fill" Grid.Column="1" Grid.Row="2" Margin="14,35,14,36.333"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Height="47" Width="300" FontFamily="Microsoft New Tai Lue" FontSize="41" Foreground="#FF95AF80" Grid.Column="1" Margin="14,23,14,0" Grid.Row="1"><Run Language="pl-pl" Text="TRIP PLANNER"/></TextBlock>
+        <Rectangle Grid.Column="3" HorizontalAlignment="Left" Height="90" Grid.Row="1" Stroke="White" VerticalAlignment="Center" Width="671" Fill="#FF131513" Grid.ColumnSpan="4" Margin="0,0,0,136"/>
+        <TextBlock x:Name="start_opis" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="646" FontFamily="Microsoft New Tai Lue" FontSize="20" Foreground="#FF95AF80" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="3" Margin="15,0,0,0"><Run Language="pl-pl" Text="beginning of the trip: "/></TextBlock>
+        <TextBlock x:Name="stop_opis" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="646" FontFamily="Microsoft New Tai Lue" FontSize="20" Foreground="#FF95AF80" Grid.Column="3" Margin="15,27,0,0" Grid.Row="1" Grid.ColumnSpan="3"><Run Language="pl-pl" Text="destination of the trip: "/></TextBlock>
+        <TextBlock x:Name="data_opis" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="646" FontFamily="Microsoft New Tai Lue" FontSize="20" Foreground="#FF95AF80" Grid.Column="3" Margin="15,54,0,0" Grid.Row="1" Grid.ColumnSpan="3"><Run Language="pl-pl" Text="date of the trip: "/></TextBlock>
+
+        <ListBox Name="listBoxpogoda" Grid.Column="3" Grid.Row="2" Background="#FF131513" BorderBrush="#FF131513" FontFamily="Microsoft New Tai Lue" FontSize="20" Foreground="White" 
+                 ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                 ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="10,5,9.667,11.667"/>
+        <Image x:Name="Obraz_pogoda1" HorizontalAlignment="Left" Height="128" VerticalAlignment="Top" Width="128" Source="/icons/unknown.png" Stretch="Fill" Grid.Column="3" Grid.Row="1" Margin="0,94,0,0"/>
+        <Image x:Name="Obraz_pogoda2" HorizontalAlignment="Left" Height="128" VerticalAlignment="Top" Width="128" Source="/icons/unknown.png" Stretch="Fill" Grid.Column="3" Grid.Row="1" Margin="172,94,25,0"/>
+        <Image x:Name="Obraz_pogoda3" HorizontalAlignment="Left" Height="128" VerticalAlignment="Top" Width="128" Source="/icons/unknown.png" Stretch="Fill" Grid.Column="5" Grid.Row="1" Margin="0,94,0,0"/>
+        <ListBox Name="listBoxhotele" Grid.Column="5" Grid.Row="2" Background="#FF131513" BorderBrush="#FF131513" FontFamily="Microsoft New Tai Lue" FontSize="20" Foreground="White" 
+                 ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                 ScrollViewer.VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" Margin="0.333,5,19.667,4.667"/>
+
+        <!--<DataGrid Grid.Column="5" x:Name="grid_hotele" HorizontalAlignment="Left" Height="253" Grid.Row="5" VerticalAlignment="Top" Width="321" Background="#FF131513"/>-->
+
+        <Border BorderThickness="1" BorderBrush="White" Grid.Column="5" Grid.Row="2" Margin="5.333,5,4.667,4.667"/>
+        <DataGrid Grid.Column="3" x:Name="grid_ulubione" HorizontalAlignment="Left" Height="95" Grid.Row="3" VerticalAlignment="Top" Width="316" Background="#FF1D1F1D" Margin="3,32.333,0,0" SelectionChanged="grid_ulubione_SelectionChanged" Foreground="#FF95AF80" BorderBrush="White" OpacityMask="Black" HorizontalGridLinesBrush="White" VerticalGridLinesBrush="White" RowBackground="#FF131513" HeadersVisibility="Column"/>
+        <DataGrid Grid.Column="5" x:Name="grid_ostatnie" HorizontalAlignment="Left" Height="95" Margin="5.333,32.333,0,0" Grid.Row="3" VerticalAlignment="Top" Width="322" Background="#FF1D1F1D" BorderBrush="White" Foreground="#FF95AF80" RowBackground="#FF131513" HeadersVisibility="Column" HorizontalGridLinesBrush="White" VerticalGridLinesBrush="White"/>
+        <Button Content="Delete" Click="Usun_ulubione" HorizontalAlignment="Left" Margin="1,140.333,0,0" VerticalAlignment="Top" Height="32" Width="73" FontFamily="Microsoft New Tai Lue" FontSize="17" Background="#FF95AF80" Foreground="#FF1D1F1D" Grid.Column="3" Grid.Row="3" RenderTransformOrigin="0.893,-0.214"/>
+        <Button Content="Browse" Click="Wyszukaj_ulubione" HorizontalAlignment="Right" Margin="0,140.333,1.667,0" VerticalAlignment="Top" Height="32" Width="73" FontFamily="Microsoft New Tai Lue" FontSize="17" Background="#FF95AF80" Foreground="#FF1D1F1D" Grid.Column="3" Grid.Row="3" RenderTransformOrigin="0.514,1.328"/>
+        <Button Content="Delete" Click="Usun_ostatnie" HorizontalAlignment="Left" Margin="1.333,140.333,0,0" VerticalAlignment="Top" Height="32" Width="73" FontFamily="Microsoft New Tai Lue" FontSize="17" Background="#FF95AF80" Foreground="#FF1D1F1D" Grid.Column="5" Grid.Row="3" RenderTransformOrigin="2.148,0.599"/>
+        <Button Content="Browse" Click="Wyszukaj_ostatnie" HorizontalAlignment="Right" Margin="0,140.333,1.667,0" VerticalAlignment="Top" Height="32" Width="73" FontFamily="Microsoft New Tai Lue" FontSize="17" Background="#FF95AF80" Foreground="#FF1D1F1D" Grid.Column="5" Grid.Row="3" RenderTransformOrigin="0.363,-1.224"/>
+        <TextBlock x:Name="start_opis_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="133" FontFamily="Microsoft New Tai Lue" FontSize="17" Foreground="#FF95AF80" Grid.Column="3" Grid.Row="3" Margin="6,3.333,0,0" Text="favourite:"/>
+        <TextBlock x:Name="start_opis_Copy1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="133" FontFamily="Microsoft New Tai Lue" FontSize="17" Foreground="#FF95AF80" Grid.Column="5" Grid.Row="3" Margin="6.333,5.333,0,0" Text="last:"/>
+        <Canvas x:Name="Wykres" Grid.Column="5" Margin="127.333,100,11.667,14" Grid.Row="1" RenderTransformOrigin="0.5,0.5" >
+            <Canvas.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Canvas.RenderTransform>
+            <Rectangle x:Name="Dzien_1" Width="45" Height="0" Fill="#FF95AF80" Canvas.Left="142" Canvas.Top="5" />
+            <Rectangle x:Name="Dzien_2" Width="45" Height="0" Fill="#FF95AF80" Canvas.Left="77" Canvas.Top="5" />
+            <Rectangle x:Name="Dzien_3" Width="45" Height="0" Fill="#FF95AF80" Canvas.Left="12" Canvas.Top="5" />
+        </Canvas>
+        <TextBlock x:Name="Temp_Dzien_1" Grid.Column="5" HorizontalAlignment="Left" Height="18" Margin="130.333,208,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="49" Background="{x:Null}" FontFamily="Microsoft New Tai Lue" Foreground="White"/>
+        <TextBlock x:Name="Temp_Dzien_2" Grid.Column="5" HorizontalAlignment="Left" Height="17" Margin="194.333,209,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="49" Background="{x:Null}" FontFamily="Microsoft New Tai Lue" Foreground="White"/>
+        <TextBlock x:Name="Temp_Dzien_3" Grid.Column="5" HorizontalAlignment="Left" Height="17" Margin="260.333,209,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="49" Background="{x:Null}" FontFamily="Microsoft New Tai Lue" Foreground="White"/>
+    </Grid>
+</Window>

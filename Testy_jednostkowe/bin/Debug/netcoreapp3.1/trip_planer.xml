@@ -1,0 +1,879 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>trip_planer</name>
+    </assembly>
+    <members>
+        <member name="T:trip_planer.Data_Base">
+            <summary>
+            Klasa <c>Data_Base</c> zawiera metody obsługujące zapis i usuwanie
+            z tabel Ostatnie_tabela i Ulubione_tabela.
+            <list type="bullet">
+            <item>
+            <term>Zapis_BD_ostatnie </term>
+            <description>Metoda zapisu danych do Ostatnie_tabela</description>
+            </item>
+            <item>
+            <term>Zapis_BD_ulubione </term>
+            <description>Metoda zapisu danych do Ulubione_tabela</description>
+            </item>
+            <item>
+            <term>Usun_BD_ulubione </term>
+            <description>Metoda usuwania danych z Ulubione_tabela</description>
+            </item>
+            <item>
+            <term>Usun_BD_ostatnie </term>
+            <description>Metoda usuwania danych z Ostatnie_tabela</description>
+            </item>
+            </list>
+            </summary>
+            <remarks>
+            <para>Klasa <c>Data_Base</c> zawiera metody obsługujące zapis i usuwanie
+            z tabel Ostatnie_tabela i Ulubione_tabela.</para>
+            </remarks>
+        </member>
+        <member name="M:trip_planer.Data_Base.Zapis_BD_ostatnie(System.String,System.String,System.String)">
+            <summary>
+            Metoda realizująca zapis danych do Ostatnie_tabela.
+            </summary>
+            <remarks>
+            <para>Metoda realizuje zapis danych do Ostatnie_tabela.</para>
+            </remarks>
+            <param name="poczatek">Nazwa miasta startowego.</param>
+            <param name="koniec">Nazwa miasta docelowego.</param>
+            <param name="data_">Data podróży.</param>
+        </member>
+        <member name="M:trip_planer.Data_Base.Zapis_BD_ulubione(System.String,System.String,System.String)">
+            <summary>
+            Metoda realizująca zapis danych do Ulubione_tabela.
+            </summary>
+            <remarks>
+            <para>Metoda realizuje zapis danych do Ulubione_tabela.</para>
+            </remarks>
+            <param name="poczatek">Nazwa miasta startowego.</param>
+            <param name="koniec">Nazwa miasta docelowego.</param>
+            <param name="data_">Data podróży.</param>
+        </member>
+        <member name="M:trip_planer.Data_Base.Usun_BD_ostatnie(trip_planer.Ostatnie_tabela)">
+            <summary>
+            Metoda realizująca usuwanie danych z Ostatnie_tabela.
+            </summary>
+            <remarks>
+            <para>Metoda realizuje usuwanie danych do Ostatnie_tabela.</para>
+            </remarks>
+            <param name="o">Obiekt do usunięcia.</param>
+        </member>
+        <member name="M:trip_planer.Data_Base.Usun_BD_ulubione(trip_planer.Ulubione_tabela)">
+            <summary>
+            Metoda realizująca usuwanie danych z Ulubione_tabela.
+            </summary>
+            <remarks>
+            <para>Metoda realizuje usuwanie danych do Ulubione_tabela.</para>
+            </remarks>
+            <param name="o">Obiekt do usunięcia.</param>
+        </member>
+        <member name="T:trip_planer.HotelsEntity">
+            <summary>
+            Klasa <c>HotelsEntity</c> zawiera właściwości odpowiednie do odpowiedzi
+            odpowiedniej części API i metodę walidacji otrzymanych danych.
+            <list type="bullet">
+            <item>
+            <term>Walidacja </term>
+            <description>Metoda walidacji danych</description>
+            </item>
+            </list>
+            </summary>
+            <remarks>
+            <para>Klasa <c>HotelsEntity</c> zawiera właściwości odpowiednie do 
+            odpowiedzi odpowiedniej części API i metodę walidacji otrzymanych 
+            danych.</para>
+            </remarks>
+        </member>
+        <member name="P:trip_planer.HotelsEntity.Name">
+            <value>Pobiera nazwę elementu w mieście.</value>
+        </member>
+        <member name="M:trip_planer.HotelsEntity.Walidacja">
+            <summary>
+            Metoda realizuje walidację danych zawartych w obiekcie typu 
+            <c>HotelsEntity</c>.
+            </summary>
+            <remarks>
+            <para>Metoda realizuje walidację danych zawartych w obiekcie typu 
+            <c>HotelsEntity</c>.</para>
+            </remarks>
+            <exception cref="T:System.Exception">Wyrzucany, gdy dane nie są 
+            prawidłowe.</exception>      
+        </member>
+        <member name="T:trip_planer.HotelsProcessor">
+            <summary>
+            Klasa <c>HotelsProcessor</c> zawiera metodę wysyłającą żądanie do API
+            i odczytującą odpowiedź.
+            <list type="bullet">
+            <item>
+            <term>Wczytaj </term>
+            <description>Metoda wczytania odpowiedzi API</description>
+            </item>
+            </list>
+            </summary>
+            <remarks>
+            <para> Klasa <c>HotelsProcessor</c> zawiera metodę wysyłającą żądanie
+            do API i odczytującą odpowiedź.</para>
+            </remarks>
+        </member>
+        <member name="M:trip_planer.HotelsProcessor.Wczytaj(System.String)">
+            <summary>
+            Metoda realizuje wysłanie żądania do odpowiedniego API i odebranie 
+            odpowiedzi.
+            </summary>
+            <remarks>
+            <para>Metoda realizuje wysłanie żądania do odpowiedniego API i 
+            odebranie odpowiedzi oraz jej walidację.</para>
+            </remarks>
+            <exception cref="T:System.Exception">Wyrzucany, gdy dane nie są 
+            prawidłowe lub nie uzyskano odpowiedzi.</exception>
+            <param name="Text">Nazwa miasta docelowego.</param>
+            <returns>Odpowiedź API</returns>
+        </member>
+        <member name="T:trip_planer.HotelsResult">
+            <summary>
+            Klasa <c>HotelsResult</c> zawiera właściwości odpowiednie do odpowiedzi
+            odpowiedniej części API i metodę walidacji otrzymanych danych.
+            <list type="bullet">
+            <item>
+            <term>Walidacja </term>
+            <description>Metoda walidacji danych</description>
+            </item>
+            </list>
+            </summary>
+            <remarks>
+            <para>Klasa <c>HotelsResult</c> zawiera właściwości odpowiednie do 
+            odpowiedzi odpowiedniej części API i metodę walidacji otrzymanych 
+            danych.</para>
+            </remarks>
+        </member>
+        <member name="P:trip_planer.HotelsResult.Suggestions">
+            <value>Pobiera listę z elementami w miećie.</value>
+        </member>
+        <member name="M:trip_planer.HotelsResult.Walidacja">
+            <summary>
+            Metoda realizuje walidację danych zawartych w obiekcie typu 
+            <c>HotelsResult</c>.
+            </summary>
+            <remarks>
+            <para>Metoda realizuje walidację danych zawartych w obiekcie typu 
+            <c>HotelsResult</c>.</para>
+            </remarks>
+            <exception cref="T:System.Exception">Wyrzucany, gdy dane nie są 
+            prawidłowe.</exception>
+        </member>
+        <member name="T:trip_planer.HotelsSuggestion">
+            <summary>
+            Klasa <c>HotelsSuggestion</c> zawiera właściwości odpowiednie do odpowiedzi
+            odpowiedniej części API i metodę walidacji otrzymanych danych.
+            <list type="bullet">
+            <item>
+            <term>Walidacja </term>
+            <description>Metoda walidacji danych</description>
+            </item>
+            </list>
+            </summary>
+            <remarks>
+            <para>Klasa <c>HotelsSuggestion</c> zawiera właściwości odpowiednie do 
+            odpowiedzi odpowiedniej części API i metodę walidacji otrzymanych 
+            danych.</para>
+            </remarks>
+        </member>
+        <member name="P:trip_planer.HotelsSuggestion.Group">
+            <value>Pobiera informację o nazwie grupy elementów (hotele, punkty
+            widokowe, środki transportu, części miasta) w mieście.</value>
+        </member>
+        <member name="P:trip_planer.HotelsSuggestion.Entities">
+            <value>Pobiera grupę elementów w mieście.</value>
+        </member>
+        <member name="M:trip_planer.HotelsSuggestion.Walidacja">
+            <summary>
+            Metoda realizuje walidację danych zawartych w obiekcie typu 
+            <c>HotelsSuggestion</c>.
+            </summary>
+            <remarks>
+            <para>Metoda realizuje walidację danych zawartych w obiekcie typu 
+            <c>HotelsSuggestion</c>.</para>
+            </remarks>
+            <exception cref="T:System.Exception">Wyrzucany, gdy dane nie są 
+            prawidłowe.</exception>
+        </member>
+        <member name="T:trip_planer.Imageprocessing">
+            <summary>
+            Klasa <c>Imageprocessing</c> zawiera metodę losującą obraz.
+            <list type="bullet">
+            <item>
+            <term>Zwroc_losowy_obraz </term>
+            <description>Metoda zwracająca nazwę losowanego obrazu.</description>
+            </item>
+            </list>
+            </summary>
+            <remarks>
+            <para> 
+            Klasa <c>Imageprocessing</c> zawiera metodę losującą obraz.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:trip_planer.Imageprocessing.Zwroc_losowy_obraz(System.String)">
+            <summary>
+            Metoda zwracająca nazwę losowanego obrazu.
+            </summary>
+            <remarks>
+            <para> 
+            Metoda zwracająca nazwę losowanego obrazu.        
+            </para>
+            </remarks>
+            <param name="nazwa_folderu">Nazwa folderu z obrazami.</param>
+            <returns>Nazwa wylosowanego obrazu.</returns>
+        </member>
+        <member name="T:trip_planer.Trip_planerDBEntities">
+            <summary>
+            Klasa częściowa <c>Trip_planerDBEntities : DbContext</c> zawiera metody 
+            obsługujące elementy bazy danych.
+            <list type="bullet">
+            <item>
+            <term>Trip_planerDBEntities </term>
+            <description>Konstruktor klasy <c>Trip_planerDBEntities : DbContext</c>
+            </description>
+            </item>
+            <item>
+            <term>OnModelCreating </term>
+            <description>Metoda wywoływana w chwili tworzenia modelu.</description>
+            </item>
+            </list>
+            </summary>
+            <remarks>
+            <para> Klasa częściowa <c>Trip_planerDBEntities : DbContext</c> 
+            zawiera metody obsługujące elementy bazę danych.</para>
+            </remarks>
+        </member>
+        <member name="M:trip_planer.Trip_planerDBEntities.#ctor">
+            <summary>
+            Konstruktor elementu bazy danych.
+            </summary>
+            <remarks>
+            <para>Konstruktor elementu bazy danych.</para>
+            </remarks>
+        </member>
+        <member name="M:trip_planer.Trip_planerDBEntities.OnModelCreating(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            Metoda wywoływana w chwili tworzenia modelu..
+            </summary>
+            <remarks>
+            <para>Metoda wywoływana w chwili tworzenia modelu..</para>
+            </remarks>
+            <exception cref="T:System.Exception">Wyrzucany, 
+            gdy model zostanie stworzony.</exception>
+        </member>
+        <member name="P:trip_planer.Trip_planerDBEntities.Ostatnie_tabela">
+            <value>Kolekcja elementów tabeli <c>Ostatnie_tabela</c>.</value>
+        </member>
+        <member name="P:trip_planer.Trip_planerDBEntities.Ulubione_tabela">
+            <value>Kolekcja elementów tabeli <c>Ulubione_tabela</c>.</value>
+        </member>
+        <member name="T:trip_planer.Ostatnie_tabela">
+            <summary>
+            Klasa częściowa <c>Ostatnie_tabela</c> zawiera właściwości odpowiednie
+            do odpowiedzi odpowiedniej części aplikacji.
+            </summary>
+            <remarks>
+            <para>Klasa częściowa <c>Ostatnie_tabela</c> zawiera właściwości odpowiednie
+            do odpowiedzi odpowiedniej części aplikacji.</para>
+            </remarks>
+        </member>
+        <member name="P:trip_planer.Ostatnie_tabela.Id_ostatnie">
+            <value>Pobiera ID ostatniego elementu w tabeli <c>Ostatnie_tabela</c>.</value>
+        </member>
+        <member name="P:trip_planer.Ostatnie_tabela.poczatek_wycieczki">
+            <value>Pobiera nazwę miasta startowego w tabeli <c>Ostatnie_tabela</c>.</value>
+        </member>
+        <member name="P:trip_planer.Ostatnie_tabela.cel_wycieczki">
+            <value>Pobiera nazwę miasta docelowego w tabeli <c>Ostatnie_tabela</c>.</value>
+        </member>
+        <member name="P:trip_planer.Ostatnie_tabela.data">
+            <value>Pobiera datę podróży w tabeli <c>Ostatnie_tabela</c>.</value>
+        </member>
+        <member name="T:trip_planer.String_mod">
+            <summary>
+            Klasa <c>String_mod</c> zawiera metody formatujące tekst.
+            <list type="bullet">
+            <item>
+            <term>Popraw_Tekst </term>
+            <description>Metoda zmieniająca ciąg znaków na pierwszą dużą literę
+            i pozostałe małe.</description>
+            </item>
+            <item>
+            <term>Popraw_Date </term>
+            <description>Metoda zmieniająca ciąg znaków na małe litery.</description>
+            </item>
+            <item>
+            <term>Popraw_Tekst </term>
+            <description>Metoda zmieniająca format daty.</description>
+            </item>
+            </list>
+            </summary>
+            <remarks>
+            <para> Klasa <c>String_mod</c>zawiera metody formatujące tekst.</para>
+            </remarks>
+        </member>
+        <member name="M:trip_planer.String_mod.Popraw_Tekst(System.String)">
+            <summary>
+            Metoda zmieniająca ciąg znaków na pierwszą dużą literę i pozostałe małe.
+            </summary>
+            <remarks>
+            <para>Metoda zmieniająca ciąg znaków na pierwszą dużą literę i pozostałe
+            małe.</para>
+            </remarks>
+            <param name="text_we">Tekst wejściowy.</param>
+            <returns>Tekst po zmianie.</returns>
+        </member>
+        <member name="M:trip_planer.String_mod.Popraw_Tekst2(System.String)">
+            <summary>
+            Metoda zmieniająca ciąg znaków na małe litery.
+            </summary>
+            <remarks>
+            <para>Metoda zmieniająca ciąg znaków na małe litery.</para>
+            </remarks>
+            <param name="text_we">Tekst wejściowy.</param>
+            <returns>Tekst po zmianie.</returns>
+        </member>
+        <member name="M:trip_planer.String_mod.Popraw_Date(System.String)">
+            <summary>
+            Metoda zmieniająca format daty.
+            </summary>
+            <remarks>
+            <para>Metoda zmieniająca format daty.</para>
+            </remarks>
+            <param name="text_we">Tekst wejściowy.</param>
+            <returns>Tekst po zmianie.</returns>
+        </member>
+        <member name="T:trip_planer.Ulubione_tabela">
+            <summary>
+            Klasa częściowa <c>Ulubione_tabela</c> zawiera właściwości odpowiednie
+            do odpowiedzi odpowiedniej części aplikacji.
+            </summary>
+            <remarks>
+            <para>Klasa częściowa <c>Ulubione_tabela</c> zawiera właściwości odpowiednie
+            do odpowiedzi odpowiedniej części aplikacji.</para>
+            </remarks>
+        </member>
+        <member name="P:trip_planer.Ulubione_tabela.Id_ulubione">
+            <value>Pobiera ID ostatniego elementu w tabeli <c>Ulubione_tabela</c>.</value>
+        </member>
+        <member name="P:trip_planer.Ulubione_tabela.poczatek_wycieczki">
+            <value>Pobiera nazwę miasta startowego w tabeli <c>Ulubione_tabela</c>.</value>
+        </member>
+        <member name="P:trip_planer.Ulubione_tabela.cel_wycieczki">
+            <value>Pobiera nazwę miasta docelowego w tabeli <c>Ulubione_tabela</c>.</value>
+        </member>
+        <member name="P:trip_planer.Ulubione_tabela.data">
+            <value>Pobiera datę podróży w tabeli <c>Ulubione_tabela</c>.</value>
+        </member>
+        <member name="T:trip_planer.UserInput">
+            <summary>
+            Klasa <c>UserInput</c> zawiera właściwości odpowiednie do danych
+            wprowadzanych przez użytkownika i metodę walidacji otrzymanych danych.
+            <list type="bullet">
+            <item>
+            <term>Walidacja </term>
+            <description>Metoda walidacji danych</description>
+            </item>
+            </list>
+            </summary>
+            <remarks>
+            <para>Klasa <c>UserInput</c> zawiera właściwości odpowiednie do 
+            danych wprowadzanych przez użytkownika i metodę walidacji otrzymanych danych.</para>
+            </remarks>
+        </member>
+        <member name="P:trip_planer.UserInput.Start">
+            <value>Pobiera nazwę miasta początkowego.</value>
+        </member>
+        <member name="P:trip_planer.UserInput.Stop">
+            <value>Pobiera nazwę miasta docelowego.</value>
+        </member>
+        <member name="P:trip_planer.UserInput.Date">
+            <value>Pobiera datę podróży.</value>
+        </member>
+        <member name="M:trip_planer.UserInput.Walidacja">
+            <summary>
+            Metoda realizuje walidację danych zawartych w obiekcie typu 
+            <c>UserInput</c>.
+            </summary>
+            <remarks>
+            <para>Metoda realizuje walidację danych zawartych w obiekcie typu 
+            <c>UserInput</c>.</para>
+            </remarks>
+            <exception cref="T:System.Exception">Wyrzucany, gdy dane nie są 
+            prawidłowe.</exception>
+        </member>
+        <member name="T:trip_planer.Values_for_plot">
+            <summary>
+            Klasa <c>Values_for_plot</c> zawiera metodę obliczania wysokości
+            wykresu.
+            <list type="bullet">
+            <item>
+            <term>Oblicz_wysokosci_wykresu </term>
+            <description>Metoda obliczania wysokości wykresu</description>
+            </item>
+            </list>
+            </summary>
+            <remarks>
+            <para>Klasa <c>Values_for_plot</c> zawiera metodę obliczania wysokości
+            wykresu.</para>
+            </remarks>
+        </member>
+        <member name="M:trip_planer.Values_for_plot.Oblicz_wysokosci_wykresu(System.Double,System.Double,System.Double)">
+            <summary>
+            Metoda realizuje obliczenie wysokosci slupkow temperatur jako 
+            proporcji wzglem maksymalnej tmperatury.
+            </summary>
+            <remarks>
+            <para>Metoda realizuje obliczenie wysokosci slupkow temperatur jako 
+            proporcji wzglem maksymalnej tmperatury.</para>
+            </remarks>
+            <param name="Temp_dzien1">Temperatura pierwszego dnia podróży.</param>
+            <param name="Temp_dzien2">Temperatura drugiego dnia podróży.</param>
+            <param name="Temp_dzien3">Temperatura trzeciego dnia podróży.</param>
+            <returns>Wysokości słupków w formie listy</returns>
+        </member>
+        <member name="T:trip_planer.WeatherList">
+            <summary>
+            Klasa <c>WeatherList</c> zawiera właściwości odpowiednie do odpowiedzi
+            odpowiedniej części API i metodę walidacji otrzymanych danych.
+            <list type="bullet">
+            <item>
+            <term>Walidacja </term>
+            <description>Metoda walidacji danych</description>
+            </item>
+            </list>
+            </summary>
+            <remarks>
+            <para>Klasa <c>WeatherList</c> zawiera właściwości odpowiednie do 
+            odpowiedzi odpowiedniej części API i metodę walidacji otrzymanych 
+            danych.</para>
+            </remarks>
+        </member>
+        <member name="P:trip_planer.WeatherList.Main">
+            <value>Pobiera obiekt danych Main w danym pomiarze.</value>
+        </member>
+        <member name="P:trip_planer.WeatherList.Weather">
+            <value>Pobiera obiekt danych Weather w danym pomiarze.</value>
+        </member>
+        <member name="P:trip_planer.WeatherList.Dt_txt">
+            <value>Pobiera datę w formacie YYY-MM-DD danego pomiaru.</value>
+        </member>
+        <member name="M:trip_planer.WeatherList.Walidacja">
+            <summary>
+            Metoda realizuje walidację danych zawartych w obiekcie typu 
+            <c>WeatherList</c>.
+            </summary>
+            <remarks>
+            <para>Metoda realizuje walidację danych zawartych w obiekcie typu 
+            <c>WeatherList</c>.</para>
+            </remarks>
+            <exception cref="T:System.Exception">Wyrzucany, gdy dane nie są 
+            prawidłowe.</exception>
+        </member>
+        <member name="T:trip_planer.WeatherMain">
+            <summary>
+            Klasa <c>WeatherMain</c> zawiera właściwości odpowiednie do odpowiedzi
+            odpowiedniej części API i metodę walidacji otrzymanych danych.
+            <list type="bullet">
+            <item>
+            <term>Walidacja </term>
+            <description>Metoda walidacji danych</description>
+            </item>
+            </list>
+            </summary>
+            <remarks>
+            <para>Klasa <c>WeatherMain</c> zawiera właściwości odpowiednie do 
+            odpowiedzi odpowiedniej części API i metodę walidacji otrzymanych 
+            danych.</para>
+            </remarks>
+        </member>
+        <member name="P:trip_planer.WeatherMain.Temp">
+            <value>Pobiera temperaturę w danym pomiarze.</value>
+        </member>
+        <member name="P:trip_planer.WeatherMain.Temp_min">
+            <value>Pobiera temperaturę minimalną w danym pomiarze.</value>
+        </member>
+        <member name="P:trip_planer.WeatherMain.Temp_max">
+            <value>Pobiera temperaturę maksymalną w danym pomiarze.</value>
+        </member>
+        <member name="P:trip_planer.WeatherMain.Pressure">
+            <value>Pobiera ciśnienie w danym pomiarze.</value>
+        </member>
+        <member name="P:trip_planer.WeatherMain.Humidity">
+            <value>Pobiera wilgotność w danym pomiarze.</value>
+        </member>
+        <member name="M:trip_planer.WeatherMain.Walidacja">
+            <summary>
+            Metoda realizuje walidację danych zawartych w obiekcie typu 
+            <c>WeatherMain</c>.
+            </summary>
+            <remarks>
+            <para>Metoda realizuje walidację danych zawartych w obiekcie typu 
+            <c>WeatherMain</c>.</para>
+            </remarks>
+            <exception cref="T:System.Exception">Wyrzucany, gdy dane nie są 
+            prawidłowe.</exception>
+        </member>
+        <member name="T:trip_planer.WeatherProcessor">
+            <summary>
+            Klasa <c>WeatherProcessor</c> zawiera metodę wysyłającą żądanie do API
+            i odczytującą odpowiedź.
+            <list type="bullet">
+            <item>
+            <term>Wczytaj </term>
+            <description>Metoda wczytania odpowiedzi API</description>
+            </item>
+            </list>
+            </summary>
+            <remarks>
+            <para> Klasa <c>WeatherProcessor</c> zawiera metodę wysyłającą żądanie
+            do API i odczytującą odpowiedź.</para>
+            </remarks>
+        </member>
+        <member name="M:trip_planer.WeatherProcessor.Wczytaj(System.String)">
+            <summary>
+            Metoda realizuje wysłanie żądania do odpowiedniego API i odebranie 
+            odpowiedzi.
+            </summary>
+            <remarks>
+            <para>Metoda realizuje wysłanie żądania do odpowiedniego API i 
+            odebranie odpowiedzi oraz jej walidację.</para>
+            </remarks>
+            <exception cref="T:System.Exception">Wyrzucany, gdy dane nie są 
+            prawidłowe lub nie uzyskano odpowiedzi.</exception>
+            <param name="Text">Nazwa miasta docelowego.</param>
+            <returns>Odpowiedź API</returns>
+        </member>
+        <member name="T:trip_planer.WeatherResult">
+            <summary>
+            Klasa <c>WeatherResult</c> zawiera właściwości odpowiednie do odpowiedzi
+            odpowiedniej części API i metodę walidacji otrzymanych danych.
+            <list type="bullet">
+            <item>
+            <term>Walidacja </term>
+            <description>Metoda walidacji danych</description>
+            </item>
+            </list>
+            </summary>
+            <remarks>
+            <para>Klasa <c>WeatherResult</c> zawiera właściwości odpowiednie do 
+            odpowiedzi odpowiedniej części API i metodę walidacji otrzymanych 
+            danych.</para>
+            </remarks>
+        </member>
+        <member name="P:trip_planer.WeatherResult.List">
+            <value>Pobiera listę z pomiarami warunków pogodowych.</value>
+        </member>
+        <member name="M:trip_planer.WeatherResult.Walidacja">
+            <summary>
+            Metoda realizuje walidację danych zawartych w obiekcie typu 
+            <c>WeatherResult</c>.
+            </summary>
+            <remarks>
+            <para>Metoda realizuje walidację danych zawartych w obiekcie typu 
+            <c>WeatherResult</c>.</para>
+            </remarks>
+            <exception cref="T:System.Exception">Wyrzucany, gdy dane nie są 
+            prawidłowe.</exception>
+        </member>
+        <member name="T:trip_planer.WeatherWeather">
+            <summary>
+            Klasa <c>WeatherWeather</c> zawiera właściwości odpowiednie do odpowiedzi
+            odpowiedniej części API i metodę walidacji otrzymanych danych.
+            <list type="bullet">
+            <item>
+            <term>Walidacja </term>
+            <description>Metoda walidacji danych</description>
+            </item>
+            </list>
+            </summary>
+            <remarks>
+            <para>Klasa <c>WeatherWeather</c> zawiera właściwości odpowiednie do 
+            odpowiedzi odpowiedniej części API i metodę walidacji otrzymanych 
+            danych.</para>
+            </remarks>
+        </member>
+        <member name="P:trip_planer.WeatherWeather.Description">
+            <value>Pobiera informację o opisie pogody.</value>
+        </member>
+        <member name="P:trip_planer.WeatherWeather.Icon">
+            <value>Pobiera informację o oznaczeniu grafiki pogody.</value>
+        </member>
+        <member name="M:trip_planer.WeatherWeather.Walidacja">
+            <summary>
+            Metoda realizuje walidację danych zawartych w obiekcie typu 
+            <c>WeatherWeather</c>.
+            </summary>
+            <remarks>
+            <para>Metoda realizuje walidację danych zawartych w obiekcie typu 
+            <c>WeatherWeather</c>.</para>
+            </remarks>
+            <exception cref="T:System.Exception">Wyrzucany, gdy dane nie są 
+            prawidłowe.</exception>
+        </member>
+        <member name="T:trip_planer.API">
+            <summary>
+            Klasa statyczna <c>API</c> zawiera metodę inicjalizującą klienta 
+            aplikacji.
+            <list type="bullet">
+            <item>
+            <term>Initialize_Client </term>
+            <description>Metoda inicjalizująca klienta.</description>
+            </item>
+            </list>
+            </summary>
+            <remarks>
+            <para> Klasa statyczna <c>API</c> zawiera metodę inicjalizującą klienta 
+            aplikacji.</para>
+            </remarks>
+        </member>
+        <member name="P:trip_planer.API.Api_Client">
+            <value>Umozliwia pobieranie danych ze stron.</value>
+        </member>
+        <member name="M:trip_planer.API.Initialize_Client">
+            <summary>
+            Metoda inicjalizująca klienta.
+            </summary>
+            <remarks>
+            <para>Metoda inicjalizuje klienta.</para>
+            </remarks>  
+        </member>
+        <member name="T:trip_planer.App">
+            <summary>
+            Logika interakcji dla klasy App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:trip_planer.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:trip_planer.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:trip_planer.DispatcherTimersetup">
+            <summary>
+            Klasa częściowa <c>DispatcherTimersetup : Window</c> zawiera metody 
+            obsługujące elementy wyświetlane w aplikacji.
+            <list type="bullet">
+            <item><term>DispatcherTimersetup</term></item>
+            <item><term>dispatcherTimer_Tick</term></item>
+            <item><term>Zmien_Obraz</term></item>
+            <item><term>Zapisz_do_bazy_ostatnie</term></item>
+            <item><term>Wyszukaj_podroz</term></item>
+            <item><term>Dodaj_do_ulubionych</term></item>
+            <item><term>Wyszukaj_ulubione</term></item>
+            <item><term>Wyszukaj_ostatnie</term></item>
+            <item><term>Usun_ulubione</term></item>
+            <item><term>Usun_ostatnie</term></item>
+            <item><term>Wyswietlanie_pogody</term></item>
+            <item><term>Wyswietlanie_hoteli</term></item>
+            <item><term>Wyswietlanie_wykresu</term></item>
+            </list>
+            </summary>
+            <remarks>
+            <para> Klasa częściowa <c>DispatcherTimersetup : Window</c> zawiera  
+            metody obsługujące elementy wyświetlane w aplikacji.</para>
+            </remarks>
+            <summary>
+            DispatcherTimersetup
+            </summary>
+        </member>
+        <member name="M:trip_planer.DispatcherTimersetup.#ctor">
+            <summary>
+            Konstruktor realizuje wyświetlenie danych z bazy i wywołuje zmianę 
+            obrazu.
+            </summary>
+            <remarks>
+            <para>Konstruktor realizuje wyświetlenie danych z bazy, wywołuje  
+            zmianę obrazu i inicjalizuje klienta API.</para>
+            </remarks>
+        </member>
+        <member name="M:trip_planer.DispatcherTimersetup.dispatcherTimer_Tick(System.Object,System.EventArgs)">
+            <summary>
+            Metoda realizuje zmianę obrazu co określoną ilość sekund.
+            </summary>
+            <remarks>
+            <para>Metoda realizuje zmianę obrazu co określoną ilość sekund.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:trip_planer.DispatcherTimersetup.Zmien_Obraz(System.String)">
+            <summary>
+            Metoda zmieniająca obraz.
+            </summary>
+            <remarks>
+            <para>Metoda zmieniająca obraz.</para>
+            </remarks>
+            <param name="nazwa_pliku">Nazwa pliku z obrazem.</param>
+        </member>
+        <member name="M:trip_planer.DispatcherTimersetup.Zapisz_do_bazy_ostatnie(System.String,System.String,System.String)">
+            <summary>
+            Metoda zapisująca dane podróży do bazy ostatnich.
+            </summary>
+            <remarks>
+            <para>
+            Metoda zapisująca dane podróży do bazy ostatnich.
+            </para>
+            </remarks>
+            <param name="poczatek">Nazwa miasta startowego.</param>
+            <param name="koniec">Nazwa miasta docelowego.</param>
+            <param name="data">Data podróży.</param>
+        </member>
+        <member name="M:trip_planer.DispatcherTimersetup.Wyszukaj_podroz(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda sprawdzająca wprowadzone dane, wyświetlająca odpowiedź API 
+            i zapisująca do bazy ostatnich.
+            </summary>
+            <remarks>
+            <para>
+            Metoda sprawdzająca wprowadzone dane, wyświetlająca odpowiedź API 
+            i zapisująca do bazy ostatnich.
+            </para>
+            </remarks>
+            <exception cref="T:System.IndexOutOfRangeException">Wyrzucany, gdy data 
+            jest zbyt odległa lub przeszła.</exception>        
+            <exception cref="T:System.Exception">Wyrzucany, gdy walidacja zgłosiła 
+            błędy.</exception> 
+        </member>
+        <member name="M:trip_planer.DispatcherTimersetup.Dodaj_do_ulubionych(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda dodająca parametry podróży do ulubionych.
+            </summary>
+            <remarks>
+            <para>
+            Metoda dodająca parametry podróży do ulubionych.
+            </para>
+            </remarks>
+            <exception cref="T:System.InvalidCastException">Wyrzucany, gdy któreś 
+            z miast nie zostało podane.</exception> 
+        </member>
+        <member name="M:trip_planer.DispatcherTimersetup.Wyszukaj_ulubione(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda wyszukująca parametry podróży w ulubionych.
+            </summary>
+            <remarks>
+            <para>
+            Metoda wyszukująca parametry podróży w ulubionych.
+            </para>
+            </remarks>
+            <exception cref="T:System.InvalidCastException">Wyrzucany, gdy pole
+            wyszukiwania nie zostało podane.</exception> 
+        </member>
+        <member name="M:trip_planer.DispatcherTimersetup.Wyszukaj_ostatnie(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda wyszukująca parametry podróży w ostatnich.
+            </summary>
+            <remarks>
+            <para>
+            Metoda wyszukująca parametry podróży w ostatnich.
+            </para>
+            </remarks>
+            <exception cref="T:System.InvalidCastException">Wyrzucany, gdy pole
+            wyszukiwania nie zostało podane.</exception> 
+        </member>
+        <member name="M:trip_planer.DispatcherTimersetup.Usun_ulubione(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda usuwająca pole z ulubionych.
+            </summary>
+            <remarks>
+            <para>
+            Metoda usuwająca pole z ulubionych.
+            </para>
+            </remarks>
+            <exception cref="T:System.InvalidCastException">Wyrzucany, gdy pole
+            do usunięcianie zostało podane.</exception> 
+        </member>
+        <member name="M:trip_planer.DispatcherTimersetup.Usun_ostatnie(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda usuwająca pole z ostatnich.
+            </summary>
+            <remarks>
+            <para>
+            Metoda usuwająca pole z ostatnich.
+            </para>
+            </remarks>
+            <exception cref="T:System.InvalidCastException">Wyrzucany, gdy pole
+            do usunięcia nie zostało podane.</exception> 
+        </member>
+        <member name="M:trip_planer.DispatcherTimersetup.Wyswietlanie_pogody(System.String,System.String)">
+            <summary>
+            Metoda wywietlająca informacje o pogodzie.
+            </summary>
+            <remarks>
+            <para>
+            Metoda wywietlająca informacje o pogodzie.
+            </para>
+            </remarks>
+            <param name="stop_city">Nazwa miasta docelowego.</param>
+            <param name="new_data">Nazwa miasta docelowego.</param>
+            <exception cref="T:System.Exception">Wyrzucany, gdy podano 
+            błędnąnazwe miasta.</exception> 
+            <exception cref="T:System.IndexOutOfRangeException">Wyrzucany, gdy 
+            podano nieprawidłową datę.</exception> 
+        </member>
+        <member name="M:trip_planer.DispatcherTimersetup.Wyswietlenie_hoteli(System.String)">
+            <summary>
+            Metoda wywietlająca informacje o punktach w mieście.
+            </summary>
+            <remarks>
+            <para>
+            Metoda wywietlająca informacje o punktach w mieście.
+            </para>
+            </remarks>
+            <param name="stop_city">Nazwa miasta docelowego.</param>
+            <exception cref="T:System.Exception">Wyrzucany, gdy podano 
+            błędnąnazwe miasta.</exception> 
+            <exception cref="T:System.Exception">Wyrzucany, gdy 
+            nie otrzymano odpowiednich informacji.</exception> 
+        </member>
+        <member name="M:trip_planer.DispatcherTimersetup.Wyswietlenie_wykresu(System.Double,System.Double,System.Double,System.Boolean)">
+            <summary>
+            Metoda przygotowująca dane do wyświetlenia na wykresie.
+            </summary>
+            <remarks>
+            <para>
+            Metoda przygotowująca dane do wyświetlenia na wykresie.
+            </para>
+            </remarks>
+            <param name="Temp_dzien1">Nazwa miasta docelowego.</param>
+            <param name="Temp_dzien2">Nazwa miasta docelowego.</param>
+            <param name="Temp_dzien3">Nazwa miasta docelowego.</param>
+            <param name="Czy_poprawny">Nazwa miasta docelowego.</param>
+        </member>
+        <member name="M:trip_planer.DispatcherTimersetup.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:trip_planer.Properties.Resources">
+            <summary>
+              Silnie typizowana klasa zasobów do wyszukiwania zlokalizowanych ciągów itd.
+            </summary>
+        </member>
+        <member name="P:trip_planer.Properties.Resources.ResourceManager">
+            <summary>
+              Zwraca buforowane wystąpienie składnika ResourceManager używane przez tę klasę.
+            </summary>
+        </member>
+        <member name="P:trip_planer.Properties.Resources.Culture">
+            <summary>
+              Przesłania właściwość CurrentUICulture bieżącego wątku dla wszystkich
+              przypadków przeszukiwania zasobów za pomocą tej silnie typizowanej klasy zasobów.
+            </summary>
+        </member>
+    </members>
+</doc>

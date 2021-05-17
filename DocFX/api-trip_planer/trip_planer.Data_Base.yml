@@ -1,0 +1,548 @@
+### YamlMime:ManagedReference
+items:
+- uid: trip_planer.Data_Base
+  commentId: T:trip_planer.Data_Base
+  id: Data_Base
+  parent: trip_planer
+  children:
+  - trip_planer.Data_Base.Usun_BD_ostatnie(trip_planer.Ostatnie_tabela)
+  - trip_planer.Data_Base.Usun_BD_ulubione(trip_planer.Ulubione_tabela)
+  - trip_planer.Data_Base.Zapis_BD_ostatnie(System.String,System.String,System.String)
+  - trip_planer.Data_Base.Zapis_BD_ulubione(System.String,System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: Data_Base
+  nameWithType: Data_Base
+  fullName: trip_planer.Data_Base
+  type: Class
+  source:
+    remote:
+      path: trip_planer_1/trip_planer/Data_Base.cs
+      branch: main
+      repo: https://248993@dev.azure.com/248993/PP.NJ-.Net/_git/PP.NJ-.Net
+    id: Data_Base
+    path: ../trip_planer/Data_Base.cs
+    startLine: 34
+  assemblies:
+  - trip_planer
+  namespace: trip_planer
+  summary: "\nKlasa <code>Data_Base</code> zawiera metody obsługujące zapis i usuwanie\nz tabel Ostatnie_tabela i Ulubione_tabela.\n<ul><li>Zapis_BD_ostatnie Metoda zapisu danych do Ostatnie_tabela</li><li>Zapis_BD_ulubione Metoda zapisu danych do Ulubione_tabela</li><li>Usun_BD_ulubione Metoda usuwania danych z Ulubione_tabela</li><li>Usun_BD_ostatnie Metoda usuwania danych z Ostatnie_tabela</li></ul>\n"
+  remarks: "\n<p>Klasa <code>Data_Base</code> zawiera metody obsługujące zapis i usuwanie\nz tabel Ostatnie_tabela i Ulubione_tabela.</p>\n"
+  example: []
+  syntax:
+    content: public class Data_Base
+    content.vb: Public Class Data_Base
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: trip_planer.Data_Base.Zapis_BD_ostatnie(System.String,System.String,System.String)
+  commentId: M:trip_planer.Data_Base.Zapis_BD_ostatnie(System.String,System.String,System.String)
+  id: Zapis_BD_ostatnie(System.String,System.String,System.String)
+  parent: trip_planer.Data_Base
+  langs:
+  - csharp
+  - vb
+  name: Zapis_BD_ostatnie(String, String, String)
+  nameWithType: Data_Base.Zapis_BD_ostatnie(String, String, String)
+  fullName: trip_planer.Data_Base.Zapis_BD_ostatnie(System.String, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: trip_planer_1/trip_planer/Data_Base.cs
+      branch: main
+      repo: https://248993@dev.azure.com/248993/PP.NJ-.Net/_git/PP.NJ-.Net
+    id: Zapis_BD_ostatnie
+    path: ../trip_planer/Data_Base.cs
+    startLine: 45
+  assemblies:
+  - trip_planer
+  namespace: trip_planer
+  summary: "\nMetoda realizująca zapis danych do Ostatnie_tabela.\n"
+  remarks: "\n<p>Metoda realizuje zapis danych do Ostatnie_tabela.</p>\n"
+  example: []
+  syntax:
+    content: public void Zapis_BD_ostatnie(string poczatek, string koniec, string data_)
+    parameters:
+    - id: poczatek
+      type: System.String
+      description: Nazwa miasta startowego.
+    - id: koniec
+      type: System.String
+      description: Nazwa miasta docelowego.
+    - id: data_
+      type: System.String
+      description: Data podróży.
+    content.vb: Public Sub Zapis_BD_ostatnie(poczatek As String, koniec As String, data_ As String)
+  overload: trip_planer.Data_Base.Zapis_BD_ostatnie*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: trip_planer.Data_Base.Zapis_BD_ulubione(System.String,System.String,System.String)
+  commentId: M:trip_planer.Data_Base.Zapis_BD_ulubione(System.String,System.String,System.String)
+  id: Zapis_BD_ulubione(System.String,System.String,System.String)
+  parent: trip_planer.Data_Base
+  langs:
+  - csharp
+  - vb
+  name: Zapis_BD_ulubione(String, String, String)
+  nameWithType: Data_Base.Zapis_BD_ulubione(String, String, String)
+  fullName: trip_planer.Data_Base.Zapis_BD_ulubione(System.String, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: trip_planer_1/trip_planer/Data_Base.cs
+      branch: main
+      repo: https://248993@dev.azure.com/248993/PP.NJ-.Net/_git/PP.NJ-.Net
+    id: Zapis_BD_ulubione
+    path: ../trip_planer/Data_Base.cs
+    startLine: 70
+  assemblies:
+  - trip_planer
+  namespace: trip_planer
+  summary: "\nMetoda realizująca zapis danych do Ulubione_tabela.\n"
+  remarks: "\n<p>Metoda realizuje zapis danych do Ulubione_tabela.</p>\n"
+  example: []
+  syntax:
+    content: public void Zapis_BD_ulubione(string poczatek, string koniec, string data_)
+    parameters:
+    - id: poczatek
+      type: System.String
+      description: Nazwa miasta startowego.
+    - id: koniec
+      type: System.String
+      description: Nazwa miasta docelowego.
+    - id: data_
+      type: System.String
+      description: Data podróży.
+    content.vb: Public Sub Zapis_BD_ulubione(poczatek As String, koniec As String, data_ As String)
+  overload: trip_planer.Data_Base.Zapis_BD_ulubione*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: trip_planer.Data_Base.Usun_BD_ostatnie(trip_planer.Ostatnie_tabela)
+  commentId: M:trip_planer.Data_Base.Usun_BD_ostatnie(trip_planer.Ostatnie_tabela)
+  id: Usun_BD_ostatnie(trip_planer.Ostatnie_tabela)
+  parent: trip_planer.Data_Base
+  langs:
+  - csharp
+  - vb
+  name: Usun_BD_ostatnie(Ostatnie_tabela)
+  nameWithType: Data_Base.Usun_BD_ostatnie(Ostatnie_tabela)
+  fullName: trip_planer.Data_Base.Usun_BD_ostatnie(trip_planer.Ostatnie_tabela)
+  type: Method
+  source:
+    remote:
+      path: trip_planer_1/trip_planer/Data_Base.cs
+      branch: main
+      repo: https://248993@dev.azure.com/248993/PP.NJ-.Net/_git/PP.NJ-.Net
+    id: Usun_BD_ostatnie
+    path: ../trip_planer/Data_Base.cs
+    startLine: 93
+  assemblies:
+  - trip_planer
+  namespace: trip_planer
+  summary: "\nMetoda realizująca usuwanie danych z Ostatnie_tabela.\n"
+  remarks: "\n<p>Metoda realizuje usuwanie danych do Ostatnie_tabela.</p>\n"
+  example: []
+  syntax:
+    content: public void Usun_BD_ostatnie(Ostatnie_tabela o)
+    parameters:
+    - id: o
+      type: trip_planer.Ostatnie_tabela
+      description: Obiekt do usunięcia.
+    content.vb: Public Sub Usun_BD_ostatnie(o As Ostatnie_tabela)
+  overload: trip_planer.Data_Base.Usun_BD_ostatnie*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: trip_planer.Data_Base.Usun_BD_ulubione(trip_planer.Ulubione_tabela)
+  commentId: M:trip_planer.Data_Base.Usun_BD_ulubione(trip_planer.Ulubione_tabela)
+  id: Usun_BD_ulubione(trip_planer.Ulubione_tabela)
+  parent: trip_planer.Data_Base
+  langs:
+  - csharp
+  - vb
+  name: Usun_BD_ulubione(Ulubione_tabela)
+  nameWithType: Data_Base.Usun_BD_ulubione(Ulubione_tabela)
+  fullName: trip_planer.Data_Base.Usun_BD_ulubione(trip_planer.Ulubione_tabela)
+  type: Method
+  source:
+    remote:
+      path: trip_planer_1/trip_planer/Data_Base.cs
+      branch: main
+      repo: https://248993@dev.azure.com/248993/PP.NJ-.Net/_git/PP.NJ-.Net
+    id: Usun_BD_ulubione
+    path: ../trip_planer/Data_Base.cs
+    startLine: 116
+  assemblies:
+  - trip_planer
+  namespace: trip_planer
+  summary: "\nMetoda realizująca usuwanie danych z Ulubione_tabela.\n"
+  remarks: "\n<p>Metoda realizuje usuwanie danych do Ulubione_tabela.</p>\n"
+  example: []
+  syntax:
+    content: public void Usun_BD_ulubione(Ulubione_tabela o)
+    parameters:
+    - id: o
+      type: trip_planer.Ulubione_tabela
+      description: Obiekt do usunięcia.
+    content.vb: Public Sub Usun_BD_ulubione(o As Ulubione_tabela)
+  overload: trip_planer.Data_Base.Usun_BD_ulubione*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: trip_planer
+  commentId: N:trip_planer
+  name: trip_planer
+  nameWithType: trip_planer
+  fullName: trip_planer
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: trip_planer.Data_Base.Zapis_BD_ostatnie*
+  commentId: Overload:trip_planer.Data_Base.Zapis_BD_ostatnie
+  name: Zapis_BD_ostatnie
+  nameWithType: Data_Base.Zapis_BD_ostatnie
+  fullName: trip_planer.Data_Base.Zapis_BD_ostatnie
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: trip_planer.Data_Base.Zapis_BD_ulubione*
+  commentId: Overload:trip_planer.Data_Base.Zapis_BD_ulubione
+  name: Zapis_BD_ulubione
+  nameWithType: Data_Base.Zapis_BD_ulubione
+  fullName: trip_planer.Data_Base.Zapis_BD_ulubione
+- uid: trip_planer.Data_Base.Usun_BD_ostatnie*
+  commentId: Overload:trip_planer.Data_Base.Usun_BD_ostatnie
+  name: Usun_BD_ostatnie
+  nameWithType: Data_Base.Usun_BD_ostatnie
+  fullName: trip_planer.Data_Base.Usun_BD_ostatnie
+- uid: trip_planer.Ostatnie_tabela
+  commentId: T:trip_planer.Ostatnie_tabela
+  parent: trip_planer
+  name: Ostatnie_tabela
+  nameWithType: Ostatnie_tabela
+  fullName: trip_planer.Ostatnie_tabela
+- uid: trip_planer.Data_Base.Usun_BD_ulubione*
+  commentId: Overload:trip_planer.Data_Base.Usun_BD_ulubione
+  name: Usun_BD_ulubione
+  nameWithType: Data_Base.Usun_BD_ulubione
+  fullName: trip_planer.Data_Base.Usun_BD_ulubione
+- uid: trip_planer.Ulubione_tabela
+  commentId: T:trip_planer.Ulubione_tabela
+  parent: trip_planer
+  name: Ulubione_tabela
+  nameWithType: Ulubione_tabela
+  fullName: trip_planer.Ulubione_tabela

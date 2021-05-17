@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Trip_planerDBModelStoreContainer" CdmEntityContainer="Trip_planerDBEntities">
+    <EntitySetMapping Name="Ostatnie_tabela">
+      <EntityTypeMapping TypeName="Trip_planerDBModel.Ostatnie_tabela">
+        <MappingFragment StoreEntitySet="Ostatnie_tabela">
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="Id_ostatnie" ColumnName="Id_ostatnie" />
+          <ScalarProperty Name="poczatek_wycieczki" ColumnName="poczatek_wycieczki" />
+          <ScalarProperty Name="cel_wycieczki" ColumnName="cel_wycieczki" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ulubione_tabela">
+      <EntityTypeMapping TypeName="Trip_planerDBModel.Ulubione_tabela">
+        <MappingFragment StoreEntitySet="Ulubione_tabela">
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="Id_ulubione" ColumnName="Id_ulubione" />
+          <ScalarProperty Name="poczatek_wycieczki" ColumnName="poczatek_wycieczki" />
+          <ScalarProperty Name="cel_wycieczki" ColumnName="cel_wycieczki" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

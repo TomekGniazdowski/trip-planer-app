@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Trip_planerDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Ostatnie_tabela">
+    <Key>
+      <PropertyRef Name="Id_ostatnie" />
+    </Key>
+    <Property Name="Id_ostatnie" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="poczatek_wycieczki" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cel_wycieczki" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="data" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Ulubione_tabela">
+    <Key>
+      <PropertyRef Name="Id_ulubione" />
+    </Key>
+    <Property Name="Id_ulubione" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="poczatek_wycieczki" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cel_wycieczki" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="data" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="Trip_planerDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Ostatnie_tabela" EntityType="Self.Ostatnie_tabela" />
+    <EntitySet Name="Ulubione_tabela" EntityType="Self.Ulubione_tabela" />
+  </EntityContainer>
+</Schema>

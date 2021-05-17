@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: Testy_jednostkowe
+  commentId: N:Testy_jednostkowe
+  id: Testy_jednostkowe
+  children:
+  - Testy_jednostkowe.UnitTest1
+  langs:
+  - csharp
+  - vb
+  name: Testy_jednostkowe
+  nameWithType: Testy_jednostkowe
+  fullName: Testy_jednostkowe
+  type: Namespace
+  assemblies:
+  - Testy_jednostkowe
+references:
+- uid: Testy_jednostkowe.UnitTest1
+  commentId: T:Testy_jednostkowe.UnitTest1
+  name: UnitTest1
+  nameWithType: UnitTest1
+  fullName: Testy_jednostkowe.UnitTest1

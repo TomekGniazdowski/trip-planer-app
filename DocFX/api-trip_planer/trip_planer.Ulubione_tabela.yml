@@ -1,0 +1,531 @@
+### YamlMime:ManagedReference
+items:
+- uid: trip_planer.Ulubione_tabela
+  commentId: T:trip_planer.Ulubione_tabela
+  id: Ulubione_tabela
+  parent: trip_planer
+  children:
+  - trip_planer.Ulubione_tabela.cel_wycieczki
+  - trip_planer.Ulubione_tabela.data
+  - trip_planer.Ulubione_tabela.Id_ulubione
+  - trip_planer.Ulubione_tabela.poczatek_wycieczki
+  langs:
+  - csharp
+  - vb
+  name: Ulubione_tabela
+  nameWithType: Ulubione_tabela
+  fullName: trip_planer.Ulubione_tabela
+  type: Class
+  source:
+    remote:
+      path: trip_planer_1/trip_planer/Ulubione_tabela.cs
+      branch: main
+      repo: https://248993@dev.azure.com/248993/PP.NJ-.Net/_git/PP.NJ-.Net
+    id: Ulubione_tabela
+    path: ../trip_planer/Ulubione_tabela.cs
+    startLine: 25
+  assemblies:
+  - trip_planer
+  namespace: trip_planer
+  summary: "\nKlasa częściowa <code>Ulubione_tabela</code> zawiera właściwości odpowiednie\ndo odpowiedzi odpowiedniej części aplikacji.\n"
+  remarks: "\n<p>Klasa częściowa <code>Ulubione_tabela</code> zawiera właściwości odpowiednie\ndo odpowiedzi odpowiedniej części aplikacji.</p>\n"
+  example: []
+  syntax:
+    content: public class Ulubione_tabela
+    content.vb: Public Class Ulubione_tabela
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: trip_planer.Ulubione_tabela.Id_ulubione
+  commentId: P:trip_planer.Ulubione_tabela.Id_ulubione
+  id: Id_ulubione
+  parent: trip_planer.Ulubione_tabela
+  langs:
+  - csharp
+  - vb
+  name: Id_ulubione
+  nameWithType: Ulubione_tabela.Id_ulubione
+  fullName: trip_planer.Ulubione_tabela.Id_ulubione
+  type: Property
+  source:
+    remote:
+      path: trip_planer_1/trip_planer/Ulubione_tabela.cs
+      branch: main
+      repo: https://248993@dev.azure.com/248993/PP.NJ-.Net/_git/PP.NJ-.Net
+    id: Id_ulubione
+    path: ../trip_planer/Ulubione_tabela.cs
+    startLine: 29
+  assemblies:
+  - trip_planer
+  namespace: trip_planer
+  example: []
+  syntax:
+    content: public int Id_ulubione { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: Pobiera ID ostatniego elementu w tabeli <code>Ulubione_tabela</code>.
+    content.vb: Public Property Id_ulubione As Integer
+  overload: trip_planer.Ulubione_tabela.Id_ulubione*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: trip_planer.Ulubione_tabela.poczatek_wycieczki
+  commentId: P:trip_planer.Ulubione_tabela.poczatek_wycieczki
+  id: poczatek_wycieczki
+  parent: trip_planer.Ulubione_tabela
+  langs:
+  - csharp
+  - vb
+  name: poczatek_wycieczki
+  nameWithType: Ulubione_tabela.poczatek_wycieczki
+  fullName: trip_planer.Ulubione_tabela.poczatek_wycieczki
+  type: Property
+  source:
+    remote:
+      path: trip_planer_1/trip_planer/Ulubione_tabela.cs
+      branch: main
+      repo: https://248993@dev.azure.com/248993/PP.NJ-.Net/_git/PP.NJ-.Net
+    id: poczatek_wycieczki
+    path: ../trip_planer/Ulubione_tabela.cs
+    startLine: 32
+  assemblies:
+  - trip_planer
+  namespace: trip_planer
+  example: []
+  syntax:
+    content: public string poczatek_wycieczki { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: Pobiera nazwę miasta startowego w tabeli <code>Ulubione_tabela</code>.
+    content.vb: Public Property poczatek_wycieczki As String
+  overload: trip_planer.Ulubione_tabela.poczatek_wycieczki*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: trip_planer.Ulubione_tabela.cel_wycieczki
+  commentId: P:trip_planer.Ulubione_tabela.cel_wycieczki
+  id: cel_wycieczki
+  parent: trip_planer.Ulubione_tabela
+  langs:
+  - csharp
+  - vb
+  name: cel_wycieczki
+  nameWithType: Ulubione_tabela.cel_wycieczki
+  fullName: trip_planer.Ulubione_tabela.cel_wycieczki
+  type: Property
+  source:
+    remote:
+      path: trip_planer_1/trip_planer/Ulubione_tabela.cs
+      branch: main
+      repo: https://248993@dev.azure.com/248993/PP.NJ-.Net/_git/PP.NJ-.Net
+    id: cel_wycieczki
+    path: ../trip_planer/Ulubione_tabela.cs
+    startLine: 35
+  assemblies:
+  - trip_planer
+  namespace: trip_planer
+  example: []
+  syntax:
+    content: public string cel_wycieczki { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: Pobiera nazwę miasta docelowego w tabeli <code>Ulubione_tabela</code>.
+    content.vb: Public Property cel_wycieczki As String
+  overload: trip_planer.Ulubione_tabela.cel_wycieczki*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: trip_planer.Ulubione_tabela.data
+  commentId: P:trip_planer.Ulubione_tabela.data
+  id: data
+  parent: trip_planer.Ulubione_tabela
+  langs:
+  - csharp
+  - vb
+  name: data
+  nameWithType: Ulubione_tabela.data
+  fullName: trip_planer.Ulubione_tabela.data
+  type: Property
+  source:
+    remote:
+      path: trip_planer_1/trip_planer/Ulubione_tabela.cs
+      branch: main
+      repo: https://248993@dev.azure.com/248993/PP.NJ-.Net/_git/PP.NJ-.Net
+    id: data
+    path: ../trip_planer/Ulubione_tabela.cs
+    startLine: 38
+  assemblies:
+  - trip_planer
+  namespace: trip_planer
+  example: []
+  syntax:
+    content: public string data { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: Pobiera datę podróży w tabeli <code>Ulubione_tabela</code>.
+    content.vb: Public Property data As String
+  overload: trip_planer.Ulubione_tabela.data*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: trip_planer
+  commentId: N:trip_planer
+  name: trip_planer
+  nameWithType: trip_planer
+  fullName: trip_planer
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: trip_planer.Ulubione_tabela.Id_ulubione*
+  commentId: Overload:trip_planer.Ulubione_tabela.Id_ulubione
+  name: Id_ulubione
+  nameWithType: Ulubione_tabela.Id_ulubione
+  fullName: trip_planer.Ulubione_tabela.Id_ulubione
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: trip_planer.Ulubione_tabela.poczatek_wycieczki*
+  commentId: Overload:trip_planer.Ulubione_tabela.poczatek_wycieczki
+  name: poczatek_wycieczki
+  nameWithType: Ulubione_tabela.poczatek_wycieczki
+  fullName: trip_planer.Ulubione_tabela.poczatek_wycieczki
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: trip_planer.Ulubione_tabela.cel_wycieczki*
+  commentId: Overload:trip_planer.Ulubione_tabela.cel_wycieczki
+  name: cel_wycieczki
+  nameWithType: Ulubione_tabela.cel_wycieczki
+  fullName: trip_planer.Ulubione_tabela.cel_wycieczki
+- uid: trip_planer.Ulubione_tabela.data*
+  commentId: Overload:trip_planer.Ulubione_tabela.data
+  name: data
+  nameWithType: Ulubione_tabela.data
+  fullName: trip_planer.Ulubione_tabela.data

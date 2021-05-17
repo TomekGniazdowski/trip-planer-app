@@ -1,0 +1,490 @@
+### YamlMime:ManagedReference
+items:
+- uid: trip_planer.String_mod
+  commentId: T:trip_planer.String_mod
+  id: String_mod
+  parent: trip_planer
+  children:
+  - trip_planer.String_mod.Popraw_Date(System.String)
+  - trip_planer.String_mod.Popraw_Tekst(System.String)
+  - trip_planer.String_mod.Popraw_Tekst2(System.String)
+  langs:
+  - csharp
+  - vb
+  name: String_mod
+  nameWithType: String_mod
+  fullName: trip_planer.String_mod
+  type: Class
+  source:
+    remote:
+      path: trip_planer_1/trip_planer/String_mod.cs
+      branch: main
+      repo: https://248993@dev.azure.com/248993/PP.NJ-.Net/_git/PP.NJ-.Net
+    id: String_mod
+    path: ../trip_planer/String_mod.cs
+    startLine: 29
+  assemblies:
+  - trip_planer
+  namespace: trip_planer
+  summary: "\nKlasa <code>String_mod</code> zawiera metody formatujące tekst.\n<ul><li>Popraw_Tekst Metoda zmieniająca ciąg znaków na pierwszą dużą literę\ni pozostałe małe.</li><li>Popraw_Date Metoda zmieniająca ciąg znaków na małe litery.</li><li>Popraw_Tekst Metoda zmieniająca format daty.</li></ul>\n"
+  remarks: "\n<p> Klasa <code>String_mod</code>zawiera metody formatujące tekst.</p>\n"
+  example: []
+  syntax:
+    content: public class String_mod
+    content.vb: Public Class String_mod
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: trip_planer.String_mod.Popraw_Tekst(System.String)
+  commentId: M:trip_planer.String_mod.Popraw_Tekst(System.String)
+  id: Popraw_Tekst(System.String)
+  parent: trip_planer.String_mod
+  langs:
+  - csharp
+  - vb
+  name: Popraw_Tekst(String)
+  nameWithType: String_mod.Popraw_Tekst(String)
+  fullName: trip_planer.String_mod.Popraw_Tekst(System.String)
+  type: Method
+  source:
+    remote:
+      path: trip_planer_1/trip_planer/String_mod.cs
+      branch: main
+      repo: https://248993@dev.azure.com/248993/PP.NJ-.Net/_git/PP.NJ-.Net
+    id: Popraw_Tekst
+    path: ../trip_planer/String_mod.cs
+    startLine: 41
+  assemblies:
+  - trip_planer
+  namespace: trip_planer
+  summary: "\nMetoda zmieniająca ciąg znaków na pierwszą dużą literę i pozostałe małe.\n"
+  remarks: "\n<p>Metoda zmieniająca ciąg znaków na pierwszą dużą literę i pozostałe\nmałe.</p>\n"
+  example: []
+  syntax:
+    content: public string Popraw_Tekst(string text_we)
+    parameters:
+    - id: text_we
+      type: System.String
+      description: Tekst wejściowy.
+    return:
+      type: System.String
+      description: Tekst po zmianie.
+    content.vb: Public Function Popraw_Tekst(text_we As String) As String
+  overload: trip_planer.String_mod.Popraw_Tekst*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: trip_planer.String_mod.Popraw_Tekst2(System.String)
+  commentId: M:trip_planer.String_mod.Popraw_Tekst2(System.String)
+  id: Popraw_Tekst2(System.String)
+  parent: trip_planer.String_mod
+  langs:
+  - csharp
+  - vb
+  name: Popraw_Tekst2(String)
+  nameWithType: String_mod.Popraw_Tekst2(String)
+  fullName: trip_planer.String_mod.Popraw_Tekst2(System.String)
+  type: Method
+  source:
+    remote:
+      path: trip_planer_1/trip_planer/String_mod.cs
+      branch: main
+      repo: https://248993@dev.azure.com/248993/PP.NJ-.Net/_git/PP.NJ-.Net
+    id: Popraw_Tekst2
+    path: ../trip_planer/String_mod.cs
+    startLine: 56
+  assemblies:
+  - trip_planer
+  namespace: trip_planer
+  summary: "\nMetoda zmieniająca ciąg znaków na małe litery.\n"
+  remarks: "\n<p>Metoda zmieniająca ciąg znaków na małe litery.</p>\n"
+  example: []
+  syntax:
+    content: public string Popraw_Tekst2(string text_we)
+    parameters:
+    - id: text_we
+      type: System.String
+      description: Tekst wejściowy.
+    return:
+      type: System.String
+      description: Tekst po zmianie.
+    content.vb: Public Function Popraw_Tekst2(text_we As String) As String
+  overload: trip_planer.String_mod.Popraw_Tekst2*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: trip_planer.String_mod.Popraw_Date(System.String)
+  commentId: M:trip_planer.String_mod.Popraw_Date(System.String)
+  id: Popraw_Date(System.String)
+  parent: trip_planer.String_mod
+  langs:
+  - csharp
+  - vb
+  name: Popraw_Date(String)
+  nameWithType: String_mod.Popraw_Date(String)
+  fullName: trip_planer.String_mod.Popraw_Date(System.String)
+  type: Method
+  source:
+    remote:
+      path: trip_planer_1/trip_planer/String_mod.cs
+      branch: main
+      repo: https://248993@dev.azure.com/248993/PP.NJ-.Net/_git/PP.NJ-.Net
+    id: Popraw_Date
+    path: ../trip_planer/String_mod.cs
+    startLine: 71
+  assemblies:
+  - trip_planer
+  namespace: trip_planer
+  summary: "\nMetoda zmieniająca format daty.\n"
+  remarks: "\n<p>Metoda zmieniająca format daty.</p>\n"
+  example: []
+  syntax:
+    content: public string Popraw_Date(string text_we)
+    parameters:
+    - id: text_we
+      type: System.String
+      description: Tekst wejściowy.
+    return:
+      type: System.String
+      description: Tekst po zmianie.
+    content.vb: Public Function Popraw_Date(text_we As String) As String
+  overload: trip_planer.String_mod.Popraw_Date*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: trip_planer
+  commentId: N:trip_planer
+  name: trip_planer
+  nameWithType: trip_planer
+  fullName: trip_planer
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: trip_planer.String_mod.Popraw_Tekst*
+  commentId: Overload:trip_planer.String_mod.Popraw_Tekst
+  name: Popraw_Tekst
+  nameWithType: String_mod.Popraw_Tekst
+  fullName: trip_planer.String_mod.Popraw_Tekst
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: trip_planer.String_mod.Popraw_Tekst2*
+  commentId: Overload:trip_planer.String_mod.Popraw_Tekst2
+  name: Popraw_Tekst2
+  nameWithType: String_mod.Popraw_Tekst2
+  fullName: trip_planer.String_mod.Popraw_Tekst2
+- uid: trip_planer.String_mod.Popraw_Date*
+  commentId: Overload:trip_planer.String_mod.Popraw_Date
+  name: Popraw_Date
+  nameWithType: String_mod.Popraw_Date
+  fullName: trip_planer.String_mod.Popraw_Date

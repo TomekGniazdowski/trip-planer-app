@@ -1,0 +1,7 @@
+{
+  "Testy_jednostkowe": "Testy_jednostkowe.yml",
+  "Testy_jednostkowe.UnitTest1": "Testy_jednostkowe.UnitTest1.yml",
+  "Testy_jednostkowe.UnitTest1.TestMethodObraz": "Testy_jednostkowe.UnitTest1.yml",
+  "Testy_jednostkowe.UnitTest1.TestMethodString": "Testy_jednostkowe.UnitTest1.yml",
+  "Testy_jednostkowe.UnitTest1.TestMethodWykres": "Testy_jednostkowe.UnitTest1.yml"
+}
